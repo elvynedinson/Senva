@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="0dp">
+
+    <!-- Barra superior personalizada -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#8CB86D"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_arrow_left"
+            android:contentDescription="Volver"
+            android:tint="@color/white"
+            />
+
+        <TextView
+            android:id="@+id/tvReservarCita"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reservar Cita"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:gravity="center"
+            android:fontFamily="sans-serif" />
+
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/userdefault"
+            android:background="@drawable/circle_background"
+            android:scaleType="centerCrop"
+            android:contentDescription="Avatar usuario" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <!-- Paso 1 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/imgPaso1"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/paso1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ubi."
+                android:textColor="#7aa559"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Línea punteada -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="8dp"
+            android:src="@drawable/linea_punteada"
+            android:layout_gravity="center_vertical" />
+
+        <!-- Paso 2 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/imgPaso2"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/paso2" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Esp."
+                android:textColor="#7aa559"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="8dp"
+            android:src="@drawable/linea_punteada"
+            android:layout_gravity="center_vertical" />
+
+        <!-- Paso 3 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/imgPaso3"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/paso3" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drs."
+                android:textColor="#7aa559"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="8dp"
+            android:src="@drawable/linea_punteada"
+            android:layout_gravity="center_vertical" />
+
+        <!-- Paso 4 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/imgPaso4"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/paso4" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dato"
+                android:textColor="#7aa559"
+                android:textStyle="bold"    
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="8dp"
+            android:src="@drawable/linea_punteada"
+            android:layout_gravity="center_vertical" />
+
+        <!-- Paso 5 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/imgPaso5"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/paso5" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Conf."
+                android:textColor="#7aa559"
+                android:textStyle="bold"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Sección ¿Quién se atiende? -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_top_background_selector">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="#6B99AD"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="¿Quién se atiende?"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-medium"/>
+
+            <ImageView
+                android:id="@+id/reservarmas"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_add_circle"
+                android:tint="#fff"
+                android:contentDescription="Agregar"/>
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/spinnerQuienAtiende"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#F4F8FA"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textAlignment="viewStart"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+            <TextView
+                android:id="@+id/tvDniLabel"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="DNI"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:background="@drawable/bg_dni_label"
+                android:textSize="18sp"
+                android:layout_marginEnd="0dp" />
+            <EditText
+                android:id="@+id/etDni"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="2"
+                android:hint="DNI"
+                android:background="@drawable/bg_dni_field"
+                android:padding="8dp"
+                android:textColor="#6B99AD"
+                android:textSize="18sp"
+                android:focusable="false"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:longClickable="false"
+                android:inputType="none" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etNombres"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Nombre completo"
+            android:background="@drawable/rounded_backgroundgris"
+            android:padding="8dp"
+            android:textColor="#6B99AD"
+            android:textSize="18sp"
+            android:focusable="false"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:longClickable="false"
+            android:inputType="none"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tvObservacionesLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Observaciones:"
+            android:textColor="#6B99AD"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etObservaciones"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:hint="Describa su motivo ..."
+            android:background="@drawable/rounded_backgroundgris"
+            android:padding="12dp"
+            android:textColor="#6B99AD"
+            android:textSize="16sp"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnContinuar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Continuar"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:backgroundTint="#96b8c7"
+            android:textSize="20sp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:fontFamily="sans-serif-medium"
+            android:layout_gravity="center_horizontal"
+            android:elevation="2dp" />
+    </LinearLayout>
+</LinearLayout>

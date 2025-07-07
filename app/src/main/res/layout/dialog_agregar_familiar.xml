@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="500dp"
+    android:layout_height="wrap_content"
+    android:minHeight="600dp"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/rounded_background_white"
+    android:gravity="center_horizontal"
+    >
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregar Familiar"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#4B8B1D"
+        android:gravity="center"
+        android:layout_marginBottom="18dp"
+        android:shadowColor="#A5C68A"
+        android:shadowDx="0"
+        android:shadowDy="2"
+        android:shadowRadius="2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+        <EditText
+            android:id="@+id/etPrimerNombre"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="Primer Nombre"
+            android:background="@drawable/rounded_backgroundgris"
+            android:padding="6dp"
+            android:textColor="#4B8B1D"
+            android:textSize="15sp"
+            android:layout_marginEnd="4dp"
+            android:singleLine="true"
+            android:inputType="textCapWords" />
+        <EditText
+            android:id="@+id/etSegundoNombre"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="Segundo Nombre"
+            android:background="@drawable/rounded_backgroundgris"
+            android:padding="6dp"
+            android:textColor="#4B8B1D"
+            android:textSize="15sp"
+            android:singleLine="true"
+            android:inputType="textCapWords" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+        <EditText
+            android:id="@+id/etPrimerApellido"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="Primer Apellido"
+            android:background="@drawable/rounded_backgroundgris"
+            android:padding="6dp"
+            android:textColor="#4B8B1D"
+            android:textSize="15sp"
+            android:layout_marginEnd="4dp"
+            android:singleLine="true"
+            android:inputType="textCapWords" />
+        <EditText
+            android:id="@+id/etSegundoApellido"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="Segundo Apellido"
+            android:background="@drawable/rounded_backgroundgris"
+            android:padding="6dp"
+            android:textColor="#4B8B1D"
+            android:textSize="15sp"
+            android:singleLine="true"
+            android:inputType="textCapWords" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="8dp">
+        <Spinner
+            android:id="@+id/spinnerDocumento"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_backgroundgris"
+            android:layout_marginEnd="4dp" />
+        <EditText
+            android:id="@+id/etApodo"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="Apodo"
+            android:background="@drawable/rounded_backgroundgris"
+            android:padding="6dp"
+            android:textColor="#4B8B1D"
+            android:textSize="15sp"
+            android:singleLine="true"
+            android:inputType="textCapWords" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/etNumeroDocumento"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Número de documento"
+        android:background="@drawable/rounded_backgroundgris"
+        android:padding="6dp"
+        android:textColor="#4B8B1D"
+        android:textSize="15sp"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone"
+        android:singleLine="true"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnAgregarFamiliar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="AGREGAR"
+        android:textStyle="bold"
+        android:textColor="#fff"
+        android:backgroundTint="#7CB342"
+        android:textSize="20sp"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:layout_gravity="center_horizontal"
+        android:elevation="2dp" />
+
+    <TextView
+        android:id="@+id/tvLogoSenva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Senva"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#4B8B1D"
+        android:gravity="center"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="sans-serif-medium" />
+
+    <TextView
+        android:id="@+id/tvEsloganSenva"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tu cita, tu tiempo, tu Senva"
+        android:textSize="16sp"
+        android:textColor="#4B8B1D"
+        android:gravity="center"
+        android:fontFamily="sans-serif" />
+
+</LinearLayout> 

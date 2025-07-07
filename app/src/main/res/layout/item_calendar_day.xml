@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:layout_margin="2dp">
+
+    <TextView
+        android:id="@+id/tvDayNumber"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:textColor="#222"
+        android:background="@android:color/transparent" />
+
+    <View
+        android:id="@+id/viewCitaMarker"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="6dp"
+        android:background="@android:color/holo_red_light"
+        android:visibility="gone"
+        android:backgroundTint="#4CAF1C"
+        android:backgroundTintMode="src_in"
+        android:scaleX="1.2"
+        android:scaleY="1.2" />
+
+</FrameLayout> 

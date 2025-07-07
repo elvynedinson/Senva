@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Sombra verde difusa arriba -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#337AA559"
+                android:endColor="#00FFFFFF"
+                android:angle="270" />
+            <corners android:topLeftRadius="32dp" android:topRightRadius="32dp" />
+        </shape>
+    </item>
+    <!-- Fondo blanco con bordes redondeados -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF" />
+            <corners android:topLeftRadius="32dp" android:topRightRadius="32dp" />
+        </shape>
+    </item>
+</layer-list>

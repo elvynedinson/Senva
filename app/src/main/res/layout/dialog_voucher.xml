@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#7aa559"
+    android:padding="0dp">
+
+    <!-- Tarjeta blanca principal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:elevation="8dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="24dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:backgroundTint="#fff"
+        android:radius="24dp">
+
+        <!-- Título Senva -->
+        <TextView
+            android:id="@+id/tvSenva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Senva"
+            android:textColor="#7aa559"
+            android:textStyle="bold"
+            android:textSize="32sp"
+            android:gravity="center"
+            android:layout_marginTop="0dp"/>
+
+        <!-- Subtítulo -->
+        <TextView
+            android:id="@+id/tvSubSenva"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tu cita, tu tiempo, tu Senva"
+            android:textColor="#7aa559"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Nombre usuario -->
+        <TextView
+            android:id="@+id/tvNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MARÍA"
+            android:textColor="#2B4A6F"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/tvCitaProgramada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TU CITA PROGRAMADA ES"
+            android:textColor="#2B4A6F"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="2dp"/>
+
+        <!-- Fecha y hora -->
+        <TextView
+            android:id="@+id/tvFechaHora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="03/JULIO a las 10:00am"
+            android:textColor="#2B4A6F"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="2dp"/>
+
+        <!-- Doctor y especialidad -->
+        <TextView
+            android:id="@+id/tvDoctorEspecialidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dra. Ramírez / Cardiología"
+            android:textColor="#2B4A6F"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginTop="2dp"/>
+
+        <!-- QR -->
+        <ImageView
+            android:id="@+id/imgQR"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/qr"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Ubicación -->
+        <TextView
+            android:id="@+id/tvUbicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(SENVA DE SAN JUAN DE LURIGANCHO)"
+            android:textColor="#2B4A6F"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Mensaje de espera -->
+        <TextView
+            android:id="@+id/tvEsperamos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LE ESPERAMOS!"
+            android:textColor="#BDBDBD"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginTop="8dp"/>
+        <TextView
+            android:id="@+id/tvLlegar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Llegar 30 min. antes de su cita"
+            android:textColor="#7aa559"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Imagen hoja -->
+        <ImageView
+            android:id="@+id/imgHoja"
+            android:layout_width="180dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/logosenvaparaelvoucher" />
+    </LinearLayout>
+
+    <!-- Check sobresaliente -->
+    <ImageView
+        android:id="@+id/imgCheck"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/confirmarvoucher"
+        android:background="@drawable/bg_check_circle"
+        android:layout_gravity="top|center_horizontal"
+        android:elevation="10dp"
+        android:layout_marginTop="8dp"
+        android:translationY="10dp"/>
+
+    <!-- Botón cerrar -->
+    <Button
+        android:id="@+id/btnCerrar"
+        android:layout_width="140dp"
+        android:layout_height="48dp"
+        android:text="Cerrar"
+        android:textColor="#fff"
+        android:backgroundTint="#7a5cff"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/rounded_background_btn_cita"/>
+
+</FrameLayout> 

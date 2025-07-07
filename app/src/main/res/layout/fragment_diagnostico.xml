@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F7F9FB">
+
+    <!-- Barra superior verde -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#8ABF6F">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_arrow_left"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="12dp" />
+
+        <TextView
+            android:id="@+id/tvTituloDiagnostico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diagnostico"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_centerInParent="true" />
+
+        <ImageView
+            android:id="@+id/ivUser"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_perfil"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp" />
+    </RelativeLayout>
+
+    <!-- Tarjeta blanca con info del doctor -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_background"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:elevation="4dp"
+        android:clipToPadding="false"
+        android:backgroundTint="#FFFFFF"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTintMode="src_in"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp">
+
+        <!-- Especialidad alineada a izquierda y derecha -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvEspecialidadDoctor3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Especialidad:"
+                android:textColor="#41758C"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvEspecialidadValorDoctor3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="Medicina General"
+                android:textColor="#41758C"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Separador punteado -->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="6dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/linea_punteada" />
+
+        <!-- Foto, nombre y fecha (DISEÑO HORIZONTAL PROFESIONAL) -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginBottom="1dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="40dp"
+            android:paddingEnd="40dp">
+
+            <!-- Foto circular a la izquierda -->
+
+            <!-- Nombre y fecha a la derecha -->
+
+            <ImageView
+                android:id="@+id/ivFotoDoctor3"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/circle_background"
+                android:scaleType="centerCrop"
+                android:src="@drawable/doctoruno" />
+
+            <LinearLayout
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNombreDoctor3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="start"
+                    android:text="DRA. RAMÍREZ"
+                    android:textColor="#41758C"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Badge de fecha -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#E3EAF6"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="2dp">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_calender"
+                        android:tint="#5A7D8A" />
+
+                    <TextView
+                        android:id="@+id/tvFechaDoctor3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="6dp"
+                        android:text="30/06/2025"
+                        android:textColor="#5A7D8A"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Tarjeta de receta (DISEÑO REFERENCIA) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_background"
+        android:padding="0dp"
+        android:layout_margin="16dp"
+        android:elevation="2dp">
+
+        <!-- Cabecera azul claro horizontal, centrada de lado a lado -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#C7D7E5"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:gravity="center_vertical">
+
+            <!-- Ícono de receta alineado a la izquierda -->
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_historia_clinica"
+                android:tint="#23405C"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="12dp" />
+
+            <!-- Título grande y negrita, centrado -->
+            <TextView
+                android:id="@+id/tvTituloReceta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Receta - 001"
+                android:textColor="#23405C"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_gravity="center_vertical" />
+
+            <!-- Badge de fecha a la derecha -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/badge_fecha_receta"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical">
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_calender"
+                    android:tint="#23405C"
+                    android:layout_gravity="center_vertical" />
+                <TextView
+                    android:id="@+id/tvFechaReceta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="30/06/2025"
+                    android:textColor="#23405C"
+                    android:textSize="14sp"
+                    android:layout_marginStart="6dp"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Botones -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal"
+            android:background="@drawable/btn_receta_border"
+            android:weightSum="2"
+            android:layout_marginTop="0dp">
+
+            <Button
+                android:id="@+id/btnDescargar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Descargar"
+                android:textColor="#23405C"
+                android:background="@android:color/transparent"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="#23405C" />
+
+            <Button
+                android:id="@+id/btnEnviar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Enviar"
+                android:textColor="#23405C"
+                android:background="@android:color/transparent"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Separador azul -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#23405C"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Imagen de la receta -->
+        <ImageView
+            android:id="@+id/ivReceta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:background="#FFFFFF"
+            android:padding="8dp"
+            android:elevation="2dp"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+</LinearLayout>

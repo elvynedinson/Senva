@@ -1,0 +1,171 @@
+package com.example.senva
+
+import android.content.Intent
+import android.os.Build
+import android.os.Bundle
+import android.view.View
+import android.view.WindowInsetsController
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.commit
+import androidx.fragment.app.replace
+import com.example.senva.LoginActivity.Global
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
+import androidx.fragment.app.Fragment
+
+class HomeActivity : AppCompatActivity() {
+
+    private lateinit var navigation: BottomNavigationView
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_home)
+
+        // Estilo barra de estado
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        window.statusBarColor = getColor(R.color.white)
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            window.insetsController?.setSystemBarsAppearance(
+                WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS,
+                WindowInsetsController.APPEARANCE_LIGHT_STATUS_BARS
+            )
+        } else {
+            @Suppress("DEPRECATION")
+            window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+        }
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.LinearHome)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+        
+        navigation = findViewById(R.id.navMenu)
+        navigation.selectedItemId = R.id.itemFragment2
+
+        // Cargar fragmento por defecto
+        supportFragmentManager.commit {
+            replace<InicioFragmento>(R.id.frameContainer)
+        }
+        
+        navigation.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.itemFragment1 -> {
+                    val intent = Intent(this, MiCitaActivity::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.itemFragment2 -> {
+                    supportFragmentManager.commit {
+                        replace<InicioFragmento>(R.id.frameContainer)
+                    }
+                    true
+                }
+                R.id.itemFragment3 -> {
+                    supportFragmentManager.commit {
+                        replace<DiagnosticoFragment1>(R.id.frameContainer)
+                    }
+                    true
+                }
+                else -> false
+            }
+        }
+
+        val drawerLayout = findViewById<androidx.drawerlayout.widget.DrawerLayout>(R.id.drawer_layout)
+        val navigationView = findViewById<com.google.android.material.navigation.NavigationView>(R.id.navigation_view)
+        // Obtener la vista del header
+        val headerView = navigationView.getHeaderView(0)
+        val tvDrawerNombre = headerView.findViewById<android.widget.TextView>(R.id.tvDrawerNombre)
+
+        // Obtener el correo del usuario desde SharedPreferences
+        val sharedPreferences = getSharedPreferences(Global.preferencias_compartidas, MODE_PRIVATE)
+        val correo = sharedPreferences.getString("Correo", null)
+        if (correo != null) {
+            val firestore = com.google.firebase.firestore.FirebaseFirestore.getInstance()
+            firestore.collection("usuarios")
+                .whereEqualTo("correo", correo)
+                .get()
+                .addOnSuccessListener { result ->
+                    if (!result.isEmpty) {
+                        val primerNombre = result.documents[0].getString("primeronombre") ?: "Usuario"
+                        tvDrawerNombre.text = primerNombre
+                    } else {
+                        tvDrawerNombre.text = "Usuario"
+                    }
+                }
+                .addOnFailureListener {
+                    tvDrawerNombre.text = "Usuario"
+                }
+        } else {
+            tvDrawerNombre.text = "Usuario"
+        }
+
+        navigationView.setNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.itemCerrarSesion -> {
+                    borrar_sesion()
+                    val intent = Intent(this, LoginActivity::class.java)
+                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                    startActivity(intent)
+                    finish()
+                    true
+                }
+                R.id.itemPerfil -> {
+                    supportFragmentManager.commit {
+                        replace(R.id.frameContainer, PerfilFragmento())
+                        addToBackStack(null)
+                    }
+                    val drawerLayout = findViewById<androidx.drawerlayout.widget.DrawerLayout>(R.id.drawer_layout)
+                    drawerLayout.closeDrawers()
+                    true
+                }
+                R.id.itemFamilia -> {
+                    supportFragmentManager.commit {
+                        replace(R.id.frameContainer, FamiliaFragmento())
+                        addToBackStack(null)
+                    }
+                    val drawerLayout = findViewById<androidx.drawerlayout.widget.DrawerLayout>(R.id.drawer_layout)
+                    drawerLayout.closeDrawers()
+                    true
+                }
+                R.id.itemHistoriaClinica -> {
+                    val intent = Intent(this, HistorialCitasActivity::class.java)
+                    startActivity(intent)
+                    val drawerLayout = findViewById<androidx.drawerlayout.widget.DrawerLayout>(R.id.drawer_layout)
+                    drawerLayout.closeDrawers()
+                    true
+                }
+                else -> false
+            }
+        }
+    }
+
+    fun navigateToDiagnostico2(doctor: com.example.senva.model.Doctor) {
+        // Aquí se debe implementar la navegación a DiagnosticoFragment2 pasando el doctor
+        // Por ahora, solo muestra un fragmento vacío como placeholder
+        supportFragmentManager.commit {
+            replace(R.id.frameContainer, DiagnosticoFragment2.newInstance(doctor))
+            addToBackStack(null)
+        }
+    }
+
+    fun navigateToDiagnostico3(doctor: com.example.senva.model.Doctor, receta: com.example.senva.model.Receta) {
+        // Aquí se debe implementar la navegación a DiagnosticoFragment3 pasando el doctor y la receta
+        // Por ahora, solo muestra un fragmento vacío como placeholder
+        supportFragmentManager.commit {
+            replace(R.id.frameContainer, DiagnosticoFragment3.newInstance(doctor, receta))
+            addToBackStack(null)
+        }
+    }
+
+    private fun borrar_sesion() {
+        val borrarSesion = getSharedPreferences(Global.preferencias_compartidas, MODE_PRIVATE).edit()
+        borrarSesion.clear()
+        borrarSesion.apply()
+        FirebaseAuth.getInstance().signOut()
+    }
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="16dp"
+    android:elevation="2dp"
+    android:padding="12dp"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvTituloFechas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fechas Programadas"
+        android:textColor="#388e3c"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"/>
+
+    <!-- Encabezado mes y flechas -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvMesAnio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Julio de 2025"
+            android:textColor="#222"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif"/>
+
+        <ImageButton
+            android:id="@+id/btnPrev"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/rounder_backgroundsietedaa"
+            android:src="@drawable/ic_arrow_left"
+            android:scaleType="center"
+            android:contentDescription="Anterior"
+            android:layout_marginEnd="6dp"
+            android:padding="6dp"
+            android:tint="#388e3c"/>
+        <ImageButton
+            android:id="@+id/btnNext"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/rounder_backgroundsietedaa"
+            android:src="@drawable/ic_arrow_right"
+            android:scaleType="center"
+            android:contentDescription="Siguiente"
+            android:padding="6dp"
+            android:tint="#388e3c"/>
+    </LinearLayout>
+
+    <!-- Kizitonwose CalendarView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/calendarRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:clipToPadding="false"
+        android:clipChildren="false" />
+
+</LinearLayout> 

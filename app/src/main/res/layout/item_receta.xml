@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="#FFFFFF"
+    android:padding="0dp"
+    android:layout_marginBottom="10dp"
+    android:gravity="center_vertical"
+    android:elevation="1dp"
+    android:layout_marginTop="2dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp">
+
+    <!-- Borde azul -->
+    <View
+        android:layout_width="4dp"
+        android:layout_height="match_parent"
+        android:background="#3A8DCC" />
+
+    <!-- Icono receta -->
+    <ImageView
+        android:id="@+id/ivIconoReceta"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_historia_clinica"
+        android:background="@drawable/circle_background"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Info receta -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvCodigoReceta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Receta - 001"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#1A3A6B" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_calender"
+                android:tint="#3A8DCC" />
+            <TextView
+                android:id="@+id/tvFechaReceta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30/06/2025"
+                android:textSize="13sp"
+                android:textColor="#3A8DCC"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Botón Ver -->
+    <LinearLayout
+        android:id="@+id/btnVerRecetaContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/rounded_background_cita"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
+        <ImageView
+            android:id="@+id/btnVerReceta"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_eye"
+            android:tint="#3A8DCC"
+            android:layout_gravity="center_vertical" />
+        <TextView
+            android:id="@+id/tvVerReceta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ver"
+            android:textColor="#3A8DCC"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="6dp" />
+    </LinearLayout>
+
+</LinearLayout> 

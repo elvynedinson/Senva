@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_background_white"
+    android:padding="12dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginLeft="15dp"
+    android:elevation="2dp">
+
+    <!-- Título y especialidad en la misma línea -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="start"
+        android:layout_marginBottom="8dp">
+        <TextView
+            android:id="@+id/tvTituloNoti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cita pendiente: "
+            android:textColor="#41758C"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"
+            android:layout_marginEnd="4dp"/>
+        <TextView
+            android:id="@+id/tvEspecialidadNoti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medicina General"
+            android:textColor="#41758C"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:fontFamily="sans-serif"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="start">
+
+        <!-- Fecha -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#E3ECF0"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginStart="0dp">
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_calender"
+                android:tint="#7ca3a7"
+                android:contentDescription="Fecha" />
+            <TextView
+                android:id="@+id/tvFechaNoti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30/06/2025"
+                android:textColor="#7ca3a7"
+                android:textSize="14sp"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+        <!-- Hora -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#E3ECF0"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical">
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/horanoti"
+                android:tint="#7ca3a7"
+                android:contentDescription="Hora" />
+            <TextView
+                android:id="@+id/tvHoraNoti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00am - 10:00am"
+                android:textColor="#7ca3a7"
+                android:textSize="14sp"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout> 

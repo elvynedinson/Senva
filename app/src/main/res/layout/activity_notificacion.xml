@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Header superior corregido y alineado -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerNotificacion"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#7aa559"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Botón de retroceso: círculo blanco con flecha verde -->
+        <ImageButton
+            android:id="@+id/btnBackNotificacion"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/circle_white_bg"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Atrás"
+            android:tint="@color/drawer_item_selected_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- Título centrado -->
+        <TextView
+            android:id="@+id/tvTituloNotificacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notificación"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Botón de ajustes a la derecha -->
+        <ImageButton
+            android:id="@+id/btnAjustesNoti"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ajustesnoti"
+            android:contentDescription="Ajustes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Contenido de notificaciones debajo del header -->
+    <!-- Ejemplo: -->
+    <!-- <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aquí van las notificaciones"
+        app:layout_constraintTop_toBottomOf="@id/headerNotificacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" /> -->
+
+    <!-- Notificación de ejemplo -->
+
+    <!-- Lista de notificaciones -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNotificaciones"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/headerNotificacion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:clipToPadding="false"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

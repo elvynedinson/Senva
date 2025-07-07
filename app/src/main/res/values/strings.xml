@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Senva</string>
+    <string-array name="documentos">
+        <item>Seleccione</item>
+        <item>Dni</item>
+        <item>Carnet de extranjeria</item>
+        <item>Pasaporte</item>
+    </string-array>
+    <string name="web_cliente">931557594634-0kckskq7k953e2sjacs9eg0j0ab4h96n.apps.googleusercontent.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="navigation_drawer_open">Abrir menú</string>
+    <string name="navigation_drawer_close">Cerrar menú</string>
+    <string name="menu_perfil">Perfil</string>
+    <string name="menu_familia">Familia</string>
+    <string name="menu_historia_clinica">Historia clínica</string>
+    <string name="menu_configuracion_rapida">Configuración rápida</string>
+    <string name="menu_cerrar_sesion">Cerrar sesión</string>
+
+    <!-- Días de la semana en español -->
+    <string-array name="dias_semana_es">
+        <item>Lun</item>
+        <item>Mar</item>
+        <item>Mié</item>
+        <item>Jue</item>
+        <item>Vie</item>
+        <item>Sáb</item>
+        <item>Dom</item>
+    </string-array>
+    <!-- Meses en español -->
+    <string-array name="meses_es">
+        <item>Enero</item>
+        <item>Febrero</item>
+        <item>Marzo</item>
+        <item>Abril</item>
+        <item>Mayo</item>
+        <item>Junio</item>
+        <item>Julio</item>
+        <item>Agosto</item>
+        <item>Septiembre</item>
+        <item>Octubre</item>
+        <item>Noviembre</item>
+        <item>Diciembre</item>
+    </string-array>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="0dp">
+
+    <!-- Encabezado -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#8CB86D"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/btnBackFamilia"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_arrow_left"
+            android:contentDescription="Volver"
+            android:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tvTituloFamilia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Familia"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:gravity="center"
+            android:fontFamily="sans-serif" />
+
+        <ImageView
+            android:id="@+id/btnAgregarFamiliar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_add_circle"
+            android:tint="@color/white"
+            android:contentDescription="Agregar familiar" />
+    </LinearLayout>
+
+    <!-- Mensaje vacío -->
+    <TextView
+        android:id="@+id/tvFamiliaVacio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No hay familiares registrados."
+        android:textColor="#6B99AD"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        android:visibility="gone" />
+
+    <!-- Lista de familiares -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerFamilia"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:clipToPadding="false" />
+
+</LinearLayout> 

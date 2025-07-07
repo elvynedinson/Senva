@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "931557594634",
+    "project_id": "senva-a6647",
+    "storage_bucket": "senva-a6647.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:931557594634:android:9f49307a52d9d44c2a71f3",
+        "android_client_info": {
+          "package_name": "com.example.senva"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "931557594634-5310i503hkd6q0vjgbjlcn32ss1ujas9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.senva",
+            "certificate_hash": "7559143df7b6b7afd3b0c97bd49b5ddc22b6b1ce"
+          }
+        },
+        {
+          "client_id": "931557594634-0kckskq7k953e2sjacs9eg0j0ab4h96n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhZCX1o3xNG4mEbH2te3sSw8PEgefZio0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "931557594634-0kckskq7k953e2sjacs9eg0j0ab4h96n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
